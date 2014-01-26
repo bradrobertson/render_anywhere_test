@@ -8,6 +8,10 @@ class ApplicationSerializer < ActiveModel::Serializer
     Rails.application.config.action_controller
   end
 
+  def perform_caching?
+    false
+  end
+
   delegate :render, to: :renderer
 
 private
